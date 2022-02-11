@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <title>Countdown</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=1">
+        <style type="text/css" href="css/default.css"></style>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+
+        <style>
+            html,
+            body {
+                height: 100%;
+            }
+
+            body {
+                background: url("img/bg.jpg") center center no-repeat;
+                background-size: cover;
+                color: #fff;
+                text-align: center;
+                font-size: 50px;
+                line-height: 55px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="countdown"></div>
+        <script type="text/javascript">
+            $("#countdown").countdown("2018/06/01", function(event) {
+                $(this).text(
+                    event.strftime('%-D dní %-H hodin %-M minut %-S sekund')
+                );
+            });
+        </script>
+    </body>
+</html>
+
+
